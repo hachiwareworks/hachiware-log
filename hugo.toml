@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://hachiware-log.com/"
 languageCode = "ja-jp"
 title = "ハチワレ・ログ"
 theme = "PaperMod"
