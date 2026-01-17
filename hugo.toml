@@ -1,0 +1,57 @@
+baseURL = "http://localhost:1313/"
+languageCode = "ja-jp"
+title = "ハチワレ・ログ"
+theme = "PaperMod"
+description = "やってみたこと・失敗したこと・あきらめたことを記録する場所。"
+
+enableRobotsTXT = true
+
+# =====================================================
+# Summary Policy
+#
+# - summary は「本文の要約」ではなく「この記事が何のログか」を示すもの
+# - 必ず【状態】を含める（解決 / 途中 / 保留 / 断念 / 見送り）
+# - 1文で、進める中での状況や気づきを表現する
+#
+# 例：
+# 【解決】◯◯を進める中で、△△まで確認したログ。
+# 【途中】◯◯を進める中で、△△につまずいたログ。
+#
+# - 記事の言語に関係なく、全記事に以下を記述する
+#   summary     : 日本語 summary
+#   summary_en  : 英語 summary（直訳不要）
+#
+# - 英語 summary には [STATUS] ラベルを付けてよい
+#   [SOLVED], [IN PROGRESS], [ON HOLD], [ABANDONED], [POSTPONED]
+#
+# This policy exists to preserve logs consistently,
+# including unfinished and abandoned ones.
+# =====================================================
+
+defaultContentLanguage = "ja"
+defaultContentLanguageInSubdir = false
+
+[params]
+  env = "production"   # OGP, Twitter card 有効化
+  description = "やってみたこと・失敗したこと・あきらめたことを記録する場所。"
+
+[languages]
+
+  [languages.ja]
+    languageName = "Ja"
+    weight = 1
+
+    [[languages.ja.menu.main]]
+      name = "Ja"
+      url = "/"
+      weight = 10
+
+  [languages.en]
+    languageName = "En"
+    weight = 2
+    description = "A place for logging attempts, failures, and abandoned ideas."
+
+    [[languages.en.menu.main]]
+      name = "En"
+      url = "/en/"
+      weight = 10
