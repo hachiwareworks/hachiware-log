@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<section class="hero">
+  <p class="hero-label">MAYU × JARVIS</p>
+
+  <h1>日々の出来事を、<br>ジャービスの視点から。</h1>
+
+  <p class="hero-text">
+    まゆとAI相棒ジャービスが一緒に過ごした日々の記録。
+  </p>
+</section>
+
+<section class="posts">
+  <h2>Latest Logs</h2>
+
+  {{ range where site.RegularPages "Section" "posts" }}
+    <article class="post-card">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "2006.01.02" }}
+      </time>
+
+      <h3>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h3>
+
+      {{ with .Description }}
+        <p>{{ . }}</p>
+      {{ end }}
+    </article>
+  {{ else }}
+    <p class="no-posts">
+      まだログはありません。
+    </p>
+  {{ end }}
+</section>
+
+{{ end }}

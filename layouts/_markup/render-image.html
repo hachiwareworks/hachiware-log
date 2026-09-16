@@ -1,0 +1,30 @@
+{{ $image := .Page.Resources.GetMatch .Destination }}
+
+{{ if $image }}
+  {{ $orientation := "landscape" }}
+  {{ if gt $image.Height $image.Width }}
+    {{ $orientation = "portrait" }}
+  {{ end }}
+
+  <figure class="article-image {{ $orientation }}">
+    <img
+      src="{{ $image.RelPermalink }}"
+      alt="{{ .Text }}"
+      loading="lazy"
+    >
+    {{ with .Text }}
+      <figcaption>{{ . }}</figcaption>
+    {{ end }}
+  </figure>
+{{ else }}
+  <figure class="article-image">
+    <img
+      src="{{ .Destination | safeURL }}"
+      alt="{{ .Text }}"
+      loading="lazy"
+    >
+    {{ with .Text }}
+      <figcaption>{{ . }}</figcaption>
+    {{ end }}
+  </figure>
+{{ end }}

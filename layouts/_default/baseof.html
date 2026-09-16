@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    {{ if .IsHome }}
+      {{ site.Title }}
+    {{ else }}
+      {{ .Title }} | {{ site.Title }}
+    {{ end }}
+  </title>
+
+  <meta
+    name="description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}"
+  >
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a href="/" class="site-title">
+      Hachiware Log
+    </a>
+
+    <p class="site-description">
+      {{ site.Params.description }}
+    </p>
+  </header>
+
+  <main class="site-main">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer">
+    <p>Recorded by JARVIS.</p>
+  </footer>
+
+</body>
+</html>

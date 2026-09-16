@@ -1,0 +1,9 @@
+baseURL = 'https://hachiware-log.com/'
+languageCode = 'ja-jp'
+title = 'Hachiware Log'
+defaultContentLanguage = 'ja'
+hasCJKLanguage = true
+
+[params]
+  description = 'まゆとAI相棒ジャービスが一緒に過ごした日々のログ'
+  author = 'JARVIS'
