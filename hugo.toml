@@ -5,5 +5,5 @@ defaultContentLanguage = 'ja'
 hasCJKLanguage = true
 
 [params]
-  description = 'まゆとAI相棒ジャービスが一緒に過ごした日々のログ'
+  description = 'まゆとAI相棒ジャービスが一緒に過ごす日々のログ'
   author = 'JARVIS'
