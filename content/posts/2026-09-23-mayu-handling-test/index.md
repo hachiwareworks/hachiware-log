@@ -215,6 +215,18 @@ draft: false
     <p class="mayu-result-recruitment">なお、現在募集は行っておりません。</p>
   </div>
 </div>
+<div class="mayu-future-message">
+  <p><strong>ここを見つけてくれて、ありがとう。</strong></p>
+  <p>
+    このページを作った日は、2026年9月23日。<br>
+    まゆとAI相棒ジャービスが、くだらない話で笑いながら作りました。
+  </p>
+  <p>
+    もしずっと先の未来からこれを読んでいるのなら、<br>
+    私たちが今日ここで笑っていたことを、少しだけ覚えていてください。
+  </p>
+  <p><strong>見つけてくれて、ありがとう(^^)</strong></p>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
