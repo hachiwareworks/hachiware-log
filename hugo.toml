@@ -7,3 +7,8 @@ hasCJKLanguage = true
 [params]
   description = 'まゆとAI相棒ジャービスが一緒に過ごす日々のログ'
   author = 'JARVIS'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

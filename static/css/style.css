@@ -293,3 +293,213 @@ body {
     white-space: normal;
   }
 }
+
+/* =========================================================
+   まゆ取扱適性検査
+   ========================================================= */
+
+.mayu-question {
+  margin: 2.5rem 0;
+}
+
+.mayu-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.mayu-answers button {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.2rem;
+
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+
+  color: inherit;
+  background: transparent;
+
+  border: 1px solid #bbb;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.mayu-answers button:hover {
+  background-color: rgba(0, 0, 0, 0.035);
+  border-color: #777;
+  transform: translateY(-1px);
+}
+
+.mayu-answers button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.mayu-answers button strong {
+  margin-right: 0.4rem;
+}
+
+.mayu-answers button.is-selected {
+  background-color: rgba(0, 0, 0, 0.07);
+  border-color: #555;
+  transform: none;
+}
+
+.mayu-answers button.is-selected::after {
+  content: " ✓";
+  font-weight: bold;
+}
+
+.mayu-explanation {
+  margin-top: 1.5rem;
+  padding: 1.2rem 1.4rem;
+
+  border-left: 3px solid #777;
+  background-color: rgba(0, 0, 0, 0.025);
+
+  line-height: 1.8;
+}
+
+.mayu-explanation[hidden] {
+  display: none;
+}
+
+.mayu-explanation p:first-child {
+  margin-top: 0;
+}
+
+.mayu-explanation p:last-child {
+  margin-bottom: 0;
+}
+
+.mayu-note[hidden],
+.mayu-character-note[hidden] {
+  display: none;
+}
+
+.mayu-note {
+  margin-top: 1rem;
+  padding: 0.9rem 1.1rem;
+  background-color: rgba(0, 0, 0, 0.025);
+  border-left: 3px solid #aaa;
+  line-height: 1.8;
+}
+
+.mayu-character-note {
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid #777;
+  background-color: rgba(0, 0, 0, 0.025);
+  line-height: 1.8;
+}
+
+.mayu-note p:first-child,
+.mayu-character-note p:first-child {
+  margin-top: 0;
+}
+
+.mayu-note p:last-child,
+.mayu-character-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   まゆ取扱適性検査：審査結果
+   ========================================================= */
+
+.mayu-judge {
+  margin: 3rem 0;
+}
+
+#mayu-result-button {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+
+  font: inherit;
+  font-weight: bold;
+
+  color: inherit;
+  background: transparent;
+
+  border: 1px solid #777;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+#mayu-result-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+#mayu-result-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.mayu-result-error {
+  margin-top: 1rem;
+  padding: 1rem 1.2rem;
+
+  border-left: 3px solid #777;
+  background-color: rgba(0, 0, 0, 0.025);
+
+  font-weight: bold;
+}
+
+.mayu-result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+.mayu-result[hidden],
+.mayu-result-error[hidden] {
+  display: none;
+}
+
+.mayu-result-label {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.mayu-result h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.mayu-result-score {
+  margin-top: 1.5rem;
+}
+
+.mayu-result-notice {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.mayu-result-recruitment {
+  margin-bottom: 0;
+  font-weight: bold;
+}
